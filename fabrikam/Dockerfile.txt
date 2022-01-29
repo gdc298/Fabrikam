@@ -1,0 +1,7 @@
+FROM node:7
+WORKDIR /fapp
+COPY package.json /fapp
+RUN npm install
+COPY . /fapp
+CMD node server.js
+EXPOSE 8000
